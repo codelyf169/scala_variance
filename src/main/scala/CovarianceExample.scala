@@ -1,7 +1,12 @@
-object DemoApp {
+object CovarianceExample {
   def main(args: Array[String]): Unit = {
-    val maleCharacters: List[MaleCharacter] = List(MaleCharacter("Heisenberg"), MaleCharacter("Jesse Pinkman"), MaleCharacter("Gus Fring"))
-    val femaleCharacters: List[FemaleCharacter] = List(FemaleCharacter("Skyler White"), FemaleCharacter("Marie Schrader"))
+    val maleCharacters: List[MaleCharacter] = List(
+      MaleCharacter("Heisenberg"),
+      MaleCharacter("Jesse Pinkman"),
+      MaleCharacter("Gus Fring")
+    )
+    val femaleCharacters: List[FemaleCharacter] =
+      List(FemaleCharacter("Skyler White"), FemaleCharacter("Marie Schrader"))
 
     println("First printing Male characters!")
     sayMyName(maleCharacters)
@@ -10,9 +15,10 @@ object DemoApp {
     sayMyName(femaleCharacters)
   }
 
-  def sayMyName(characters: List[BreakingBadCharacter]): Unit = characters.foreach { character =>
-    println(s"My Name is ${character.name}")
-  }
+  def sayMyName(characters: List[BreakingBadCharacter]): Unit =
+    characters.foreach { character =>
+      println(s"My Name is ${character.name}")
+    }
 }
 
 abstract class BreakingBadCharacter {
