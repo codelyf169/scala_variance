@@ -19,6 +19,6 @@ object ImplicitsExample {
   def main(args: Array[String]) = {
     printInt("Raj")(7)
     println(printMessage(4))
-    print(plusOne("foo"))
+    print(plusOne("7"))
   }
 }
